@@ -13,7 +13,6 @@ public class MortgageTest {
         int expected = 1;
         Assert.assertEquals(expected, result);
     }
-
     @Test
     public void when2Year() {
         int amount = 100;
@@ -21,16 +20,6 @@ public class MortgageTest {
         double percent = 50;
         int result = Mortgage.year(amount, salary, percent);
         int expected = 2;
-        Assert.assertEquals(expected, result);
-    }
-
-    @Test
-    public void when3Year() {
-        int amount = 120;
-        int salary = 60;
-        double percent = 20;
-        int result = Mortgage.year(amount, salary, percent);
-        int expected = 3;
         Assert.assertEquals(expected, result);
     }
 }
