@@ -9,5 +9,8 @@ public class ArrayLoop {
         for (int index = 0; index < 5; index++) {
             System.out.println(numbers[index]);
         }
+        for (int number : numbers) {
+            System.out.println(number);
+        }
     }
 }
