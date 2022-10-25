@@ -47,7 +47,12 @@ class JavaNameValidatorTest {
     }
 
     @Test
-    void whenSymbolInvalid() {
+    void whenSymbolIsInvalid() {
         assertThat(isNameValid("fir$%t_u$er_1")).isFalse();
+    }
+
+    @Test
+    void whenFirstSymbolIsInvalid() {
+        assertThat(isNameValid("%fir$t_u$er_1")).isFalse();
     }
 }

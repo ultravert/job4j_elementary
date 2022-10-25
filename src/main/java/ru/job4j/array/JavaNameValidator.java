@@ -6,8 +6,12 @@ public class JavaNameValidator {
                 || Character.isDigit(name.codePointAt(0))) {
             return false;
         }
-        boolean valid = true;
-        for (int i = 0; i < name.length(); i++) {
+        boolean valid = isSpecialSymbol(name.codePointAt(0)) || isUpperLatinLetter(name.codePointAt(0))
+                || isLowerLatinLetter(name.codePointAt(0));
+        if (!valid) {
+            return false;
+        }
+        for (int i = 1; i < name.length(); i++) {
             valid = isSpecialSymbol(name.codePointAt(i)) || isUpperLatinLetter(name.codePointAt(i))
                     || isLowerLatinLetter(name.codePointAt(i)) || Character.isDigit(name.codePointAt(i));
             if (!valid) {
