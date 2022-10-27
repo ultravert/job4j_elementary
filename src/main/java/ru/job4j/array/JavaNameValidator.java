@@ -11,8 +11,6 @@ public class JavaNameValidator {
                     break;
                 }
             }
-        } else {
-            return false;
         }
         return valid;
     }
