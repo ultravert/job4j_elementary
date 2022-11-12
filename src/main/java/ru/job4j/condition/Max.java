@@ -30,5 +30,3 @@ public class Max {
         System.out.println(result2);
     }
 }
-
-
