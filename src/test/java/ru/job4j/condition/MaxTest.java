@@ -1,36 +1,38 @@
 package ru.job4j.condition;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.*;
 
-import static org.junit.Assert.*;
-
-public class MaxTest {
+class MaxTest {
 
     @Test
-    public void whenMax1To2Then2() {
-        int left = 1;
-        int right = 2;
-        int result = Max.max(left, right);
-        int expected = 2;
-        Assert.assertEquals(result, expected);
+    void when10and11then11() {
+        int first = 10;
+        int second = 11;
+        int rsl = Max.max(first, second);
+        int expected = 11;
+        assertThat(rsl).isEqualTo(expected);
     }
 
     @Test
-    public void whenMax2To1Then2() {
-        int left = 2;
-        int right = 1;
-        int result = Max.max(left, right);
+    void when1and2and2() {
+        int first = 1;
+        int second = 2;
+        int third = 2;
+        int rsl = Max.max(first, second, third);
         int expected = 2;
-        Assert.assertEquals(result, expected);
+        assertThat(rsl).isEqualTo(expected);
+
     }
 
     @Test
-    public void whenMax4To4Then4() {
-        int left = 4;
-        int right = 4;
-        int result = Max.max(left, right);
-        int expected = 4;
-        Assert.assertEquals(result, expected);
+    void when3and5and7and7() {
+        int first = 3;
+        int second = 5;
+        int third = 7;
+        int fourth = 7;
+        int rsl = Max.max(first, second, third, fourth);
+        int expected = 7;
+        assertThat(rsl).isEqualTo(expected);
     }
 }
